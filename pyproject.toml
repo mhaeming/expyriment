@@ -1,25 +1,26 @@
 [project]
 authors = [
-  {name = "Florian Krause", email = "florian@expyriment.org"},
-  {name = "Oliver Lindemann", email = "oliver@expyriment.org"},
+  { name = "Florian Krause", email = "florian@expyriment.org" },
+  { name = "Oliver Lindemann", email = "oliver@expyriment.org" },
 ]
 description = 'A Python library for cognitive and neuroscientific experiments'
-license = {file = "COPYING.txt"}
+license = { file = "COPYING.txt" }
 name = "expyriment"
 readme = "README.md"
 requires-python = ">=3.6"
 dynamic = ["version"]
-keywords = ["experiment control", "open science",
-            "neuroscience", "experimental psychology"]
+keywords = [
+  "experiment control",
+  "open science",
+  "neuroscience",
+  "experimental psychology",
+]
 classifiers = [
   "Programming Language :: Python :: 3",
-  "Operating System :: OS Independent"
+  "Operating System :: OS Independent",
 ]
 
-dependencies = [
-  "pygame>=2.5,<3",
-  "pyopengl>=3,<3.1.7",
-]
+dependencies = ["pygame>=2.5,<3", "pyopengl>=3,<3.1.7"]
 
 [project.optional-dependencies]
 all = [
@@ -32,15 +33,17 @@ all = [
 data_preprocessing = ["numpy>=1.6,<2"]
 parallelport_linux = ["pyparallel>=0.2,<1"]
 serialport = ["pyserial>=3,<4"]
-video = [
-  "sounddevice>=0.3,<1",
-  "mediadecoder>=0.1,<1",
-]
+video = ["sounddevice>=0.3,<1", "mediadecoder>=0.1,<1"]
 
 [project.urls]
 "Bug Tracker" = "https://github.com/expyriment/expyriment/issues"
 "Documentation" = "http://docs.expyriment.org"
 "Homepage" = 'http://www.expyriment.org'
 
+
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
 [project.scripts]
-expyriment="expyriment.cli:main"
+expyriment = "expyriment.cli:main"
